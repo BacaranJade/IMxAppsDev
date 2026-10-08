@@ -25,10 +25,7 @@ or restyling a badge means editing it once, not twice.
 
 There's no real authentication. `App.tsx` fakes it:
 
-- **Register** asks for a Student ID and "verifies" it against a hardcoded
-  list in `src/data/enrolledStudents.ts`. Try `S-2024-0001` (valid) vs.
-  anything else (rejected). Registering always creates a **student**
-  account.
+
 - **Log in** with any email containing "admin" (e.g. `admin@school.edu`) to
   land on the **admin** dashboard; any other email + a 4+ character password
   logs you in as a **student**.
@@ -52,7 +49,6 @@ src/
       dashboard-shared.css  # Styles shared by both dashboards
   data/
     mockRequests.ts         # Seed request data
-    enrolledStudents.ts     # Mock enrollment list for ID verification
   types.ts                  # Shared TypeScript types
   App.tsx                   # Auth state, request state, role-based routing
   App.css                   # Design tokens + global styles
